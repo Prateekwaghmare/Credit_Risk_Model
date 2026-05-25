@@ -12,7 +12,7 @@
 
 # 🔗 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_App-success?style=for-the-badge&logo=streamlit)]((https://prateek-credit-risk-model-ml-project.streamlit.app/))
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_App-success?style=for-the-badge&logo=streamlit)]([https://yourstreamlitlink.streamlit.app](https://prateek-credit-risk-model-ml-project.streamlit.app/))
 
 ---
 
