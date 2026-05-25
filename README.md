@@ -7,176 +7,247 @@
 ![Pandas](https://img.shields.io/badge/Pandas-2.2.2-150458?style=for-the-badge&logo=pandas)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-An AI-powered Streamlit web application that automates credit risk evaluation for loan processing officers. The app assesses a borrower's creditworthiness in real-time using machine learning — providing credit scores, default probabilities, and risk tier classifications to support smarter lending decisions.
+> An AI-powered Streamlit web application that automates credit risk evaluation for loan processing officers. The app assesses a borrower's creditworthiness in real-time using machine learning — providing credit scores, default probabilities, and risk tier classifications to support smarter lending decisions.
+---
 
-🔗 Live Demo: https://prateek-credit-risk-model-ml-project.streamlit.app/
+# 🔗 Live Demo
 
-📋 Table of Contents
-Overview
-App Preview
-Features
-Tech Stack
-Project Structure
-ML Models
-Model Evaluation
-Input Features
-Risk Tiers
-Installation
-Usage
-Deployment
-Author
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_App-success?style=for-the-badge&logo=streamlit)]((https://prateek-credit-risk-model-ml-project.streamlit.app/))
 
-🔍 Overview
-Credit risk modelling is a critical process in the banking and financial sector. This project builds an end-to-end machine learning pipeline designed for loan processing officers to evaluate an applicant's creditworthiness for an applied loan.
+---
 
-The app takes in applicant parameters like income, loan amount, credit history, and delinquency data — then returns a comprehensive risk assessment report including:
+# 📋 Table of Contents
 
-📊 Credit Score (300–900 range)
-⚠️ Default Probability (%)
-🏷️ Risk Classification (Poor / Average / Good / Excellent)
-💡 AI Explainability via model coefficients
-✨ Features
-🎯 Credit Score Prediction — Scored between 300 and 900
-📉 Default Probability — Percentage likelihood of loan default
-🏷️ Risk Tier Classification — Categorizes applicants into 4 risk bands
-💡 AI Explainability — Model coefficients help business teams understand decisions and plan future enhancements
-📊 Loan-to-Income Ratio — Calculated and displayed in real time
-🖥️ Clean Streamlit UI — Simple, intuitive interface for loan officers
-⚡ Fast Predictions — Results delivered in under 200ms
-☁️ Cloud Deployed — Hosted on Streamlit Community Cloud
-🛠 Tech Stack
-Category	Technology
-Language	Python 3.10
-Frontend	Streamlit 1.45.0
-Backend	Python, FastAPI
-Data Processing	Pandas 2.2.2, NumPy 1.26.4
-ML Library	Scikit-learn 1.5.0, XGBoost
-Model Serialization	Joblib 1.3.2
-Deployment	Streamlit Cloud
-Version Control	Git & GitHub
+- Overview
+- Features
+- Tech Stack
+- Project Structure
+- ML Models
+- Model Evaluation
+- Input Features
+- Risk Tiers
+- Installation
+- Usage
+- Deployment
+- Requirements
+- Author
 
-📁 Project Structure
-ml-project-credit-risk-modelling/
+---
+
+# 🔍 Overview
+
+Credit risk modelling is one of the most important tasks in the banking and finance sector. This project uses Machine Learning algorithms to analyze applicant details and predict:
+
+- 📊 Credit Score
+- ⚠️ Default Probability
+- 🏷️ Risk Classification
+- 💡 Loan Approval Intelligence
+
+The system helps financial institutions make smarter lending decisions.
+
+---
+
+# ✨ Features
+
+- 🎯 Credit Score Prediction
+- 📉 Default Probability Analysis
+- 🏷️ Risk Tier Classification
+- 📊 Loan-to-Income Ratio
+- ⚡ Fast Real-Time Prediction
+- 🖥️ Interactive Streamlit Dashboard
+- ☁️ Cloud Deployment Support
+- 🤖 Machine Learning Powered
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technology |
+|---|---|
+| Language | Python 3.10 |
+| Frontend | Streamlit |
+| Backend | Python |
+| ML Libraries | Scikit-learn, XGBoost |
+| Data Processing | Pandas, NumPy |
+| Model Saving | Joblib |
+| Deployment | Streamlit Cloud |
+| Version Control | Git & GitHub |
+
+---
+
+# 📁 Project Structure
+
+```bash
+credit-risk-intelligence-engine/
 │
 ├── app/
-│   ├── main.py                  # Streamlit app — entry point
-│   ├── prediction_helper.py     # ML prediction logic & helper functions
-│   ├── hero_image.png           # UI hero banner image
-│   └── artifacts/
-│       └── model_data.joblib    # Serialized trained ML models
+│   ├── main.py
+│   ├── prediction_helper.py
+│   ├── artifacts/
+│   │   └── model_data.joblib
 │
-├── .gitignore                   # Git ignore rules
-├── .python-version              # Python version pin (3.10)
-├── requirements.txt             # Project dependencies
-└── README.md                    # Project documentation
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-🤖 ML Models
-Model 1: Probability of Default (Classification)
-Algorithm: Logistic Regression & XGB Classifier
-Task: Binary classification — Default (1) or No Default (0)
-Output: Probability of default (%)
-Model 2: Credit Score (Derived)
-Score Range: 300 — 900
-Output: Applicant credit score mapped from default probability
-Risk Formula
-Credit Score  →  Risk Tier  →  Loan Decision Support
-Default Probability (%)  →  Risk Classification
+---
 
-📊 Model Evaluation
-Model quality is tracked using industry-standard metrics:
+# 🤖 ML Models
 
-Metric	Description
-AUC	Area Under the ROC Curve — overall model quality
-Gini	Gini Coefficient — model discrimination power
-KS Statistic	Kolmogorov-Smirnov — separation between default/non-default
-Recall	Sensitivity — ability to catch actual defaulters
+## Model 1: Default Prediction
 
-📝 Input Features
-Feature	Description
-Age	Applicant's age
-Annual Income (₹)	Applicant's yearly income
-Loan Amount (₹)	Amount of loan applied for
-Loan Tenure (Months)	Duration of the loan
-Loan Purpose	Home / Education / Personal / Auto, etc.
-Loan Type	Secured / Unsecured
-Residence Type	Owned / Rented / Mortgage
-Average DPD	Average Days Past Due on previous loans
-Delinquency Ratio	Ratio of delinquent payments in credit history
-Credit Utilization Ratio	% of available credit currently in use
-Open Loan Accounts	Number of currently active loan accounts
+- Algorithm: Logistic Regression / XGBoost
+- Output: Default Probability (%)
 
-🏷️ Risk Tiers
-Credit Score Range	Risk Tier	Classification
-750 — 900	🏆 Excellent	Very Low Risk
-650 — 749	✅ Good	Low Risk
-500 — 649	⚠️ Average	Moderate Risk
-300 — 499	❌ Poor	High Risk
+## Model 2: Credit Score Prediction
 
-⚙️ Installation
-Prerequisites
-Python 3.10+
-Git
-Steps
-1. Clone the repository
+- Score Range: 300–900
+- Risk-based Scoring System
 
-git clone https://github.com/Junead04/ml-project-credit-risk-modelling.git
-cd ml-project-credit-risk-modelling
-2. Create a virtual environment
+---
 
+# 📊 Model Evaluation
+
+| Metric | Description |
+|---|---|
+| AUC Score | Overall Model Performance |
+| Gini Score | Risk Separation Capability |
+| KS Statistic | Default Detection Accuracy |
+| Recall | Detection of High-Risk Users |
+
+---
+
+# 📝 Input Features
+
+| Feature | Description |
+|---|---|
+| Age | Applicant Age |
+| Annual Income | Yearly Income |
+| Loan Amount | Requested Loan Amount |
+| Loan Tenure | Loan Duration |
+| Credit Utilization | Credit Usage Ratio |
+| Delinquency Ratio | Missed Payment Ratio |
+| Open Loan Accounts | Active Loans |
+
+---
+
+# 🏷️ Risk Tiers
+
+| Credit Score | Risk Tier | Classification |
+|---|---|---|
+| 750–900 | 🏆 Excellent | Very Low Risk |
+| 650–749 | ✅ Good | Low Risk |
+| 500–649 | ⚠️ Average | Moderate Risk |
+| 300–499 | ❌ Poor | High Risk |
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/prateekwaghmare/credit-risk-intelligence-engine.git
+cd credit-risk-intelligence-engine
+```
+
+## 2️⃣ Create Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
-source venv/bin/activate        # Mac/Linux
-venv\Scripts\activate           # Windows
-3. Install dependencies
+venv\Scripts\activate
+```
 
+### Mac/Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## 3️⃣ Install Requirements
+
+```bash
 pip install -r requirements.txt
-4. Run the application
+```
 
+## 4️⃣ Run Application
+
+```bash
 streamlit run app/main.py
-5. Open in browser
+```
 
-http://localhost:8501
-🚀 Usage
-Open the web application
-Fill in the Applicant Profile section:
-Age, Annual Income, Loan Amount
-Loan Tenure, Residence Type
-Fill in the Loan Configuration section:
-Loan Purpose, Loan Type
-Delinquency Ratio, Average DPD
-Credit Utilization Ratio, Open Loan Accounts
-Click "Calculate Risk"
-View the Assessment Result:
-📊 Credit Score (300–900)
-⚠️ Default Probability (%)
-🏷️ Risk Classification
-📈 Loan-to-Income Ratio
-☁️ Deployment
-This app is deployed on Streamlit Community Cloud.
+---
 
-Deploy your own instance:
-Fork this repository
-Go to share.streamlit.io
-Connect your GitHub account
-Select the repo and configure:
-Main file path: app/main.py
-Python version: 3.10
-Click Deploy 🚀
-📦 Requirements
-streamlit==1.45.0
-numpy==1.26.4
-pandas==2.2.2
-scikit-learn==1.5.0
-joblib==1.3.2
-👨‍💻 Author
-Junead
+# 🚀 Usage
 
-GitHub
+1. Open the web application
+2. Enter applicant information
+3. Click **Calculate Risk**
+4. View:
+   - Credit Score
+   - Default Probability
+   - Risk Classification
+   - Loan Decision Support
 
-📄 License
-This project is licensed under the MIT License — feel free to use, modify, and distribute.
+---
 
-🙏 Acknowledgements
-Streamlit — for the powerful and easy web framework
-scikit-learn — for ML tools and models
-XGBoost — for gradient boosting classifier
-⭐ If you found this project helpful, please give it a star on GitHub! ⭐
+# ☁️ Deployment
+
+Deploy easily using:
+
+- Streamlit Community Cloud
+- Render
+- Railway
+- Hugging Face Spaces
+
+---
+
+# 📦 Requirements
+
+```txt
+streamlit
+numpy
+pandas
+scikit-learn
+xgboost
+joblib
+```
+
+---
+
+# 👨‍💻 Author
+
+## Prateek Waghmare
+
+[![GitHub](https://img.shields.io/badge/GitHub-PrateekWaghmare-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/prateekwaghmare)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Prateek_Waghmare-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/prateek-waghmare)
+
+[![Gmail](https://img.shields.io/badge/Gmail-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](prateekbidark2003@gmail.com)
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 🙏 Acknowledgements
+
+- Streamlit
+- Scikit-learn
+- XGBoost
+- Open Source Community
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, please give it a ⭐ on GitHub!
+
+```
