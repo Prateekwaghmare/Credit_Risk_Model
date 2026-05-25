@@ -1,5 +1,11 @@
-🏦 Credit Risk Intelligence Engine
-Python Streamlit scikit-learn NumPy Pandas License
+# 🏦 Credit Risk Intelligence Engine
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.45.0-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5.0-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-1.26.4-013243?style=for-the-badge&logo=numpy)
+![Pandas](https://img.shields.io/badge/Pandas-2.2.2-150458?style=for-the-badge&logo=pandas)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 An AI-powered Streamlit web application that automates credit risk evaluation for loan processing officers. The app assesses a borrower's creditworthiness in real-time using machine learning — providing credit scores, default probabilities, and risk tier classifications to support smarter lending decisions.
 
