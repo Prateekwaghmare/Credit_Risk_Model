@@ -183,9 +183,9 @@ streamlit run app/main.py
 
 # 🚀 Usage
 
-1. Open the web application
-2. Enter applicant information
-3. Click **Calculate Risk**
+1. Open the web application.
+2. Enter applicant information.
+3. Click **Calculate Risk**.
 4. View:
    - Credit Score
    - Default Probability
